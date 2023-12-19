@@ -6,6 +6,36 @@
     <title>バスケスタッツ</title>
     <link rel="stylesheet" href="./output.css" />
     <link rel="icon" href="./images/favicon.png" type="image/png" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11376370126"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'AW-11376370126');
+    </script>
+    <!-- Event snippet for appstoreへのリンククリック conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+          send_to: 'AW-11376370126/9ecKCMnD9e8YEM7D1rAq',
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
   </head>
   <body class="bg-gray-100 text-gray-900">
     <div class="max-w-screen-md bg-white mx-auto">
@@ -15,7 +45,10 @@
         <div class="container mx-auto flex justify-between items-center px-4">
           <div class="text-base font-bold">今すぐダウンロード!</div>
 
-          <a href="https://apps.apple.com/jp/app/id6463869235">
+          <a
+            href="https://apps.apple.com/jp/app/id6463869235"
+            onclick="return gtag_report_conversion('https://apps.apple.com/jp/app/id6463869235')"
+          >
             <img class="w-36" src="./images/app_store.png" alt="App Store" />
           </a>
         </div>
@@ -28,7 +61,10 @@
             <p class="text-base">バスケスタッツアプリ</p>
           </div>
           <div class="flex justify-between items-end">
-            <a class="mb-10" href="https://apps.apple.com/jp/app/id6463869235">
+            <a
+              href="https://apps.apple.com/jp/app/id6463869235"
+              onclick="return gtag_report_conversion('https://apps.apple.com/jp/app/id6463869235')"
+            >
               <img class="w-20" src="./images/app_store.png" alt="" />
             </a>
             <div class="flex items-end">
@@ -114,7 +150,7 @@
         </div>
         <div>
           <div class="text-sm font-bold mt-6 text-white flex justify-center">
-            スタッツの計算が大変
+            入力したスタッツを自動で計算
           </div>
           <img
             class="w-40 object-contain mx-auto mt-5"
@@ -130,7 +166,10 @@
               <div class="text-base font-bold">バスケスタッツ</div>
               <div class="text-sm mt-6 font-bold">圧倒的使いやすさ</div>
               <div class="text-sm font-bold">バスケスタッツアプリ</div>
-              <a href="https://apps.apple.com/jp/app/id6463869235">
+              <a
+                href="https://apps.apple.com/jp/app/id6463869235"
+                onclick="return gtag_report_conversion('https://apps.apple.com/jp/app/id6463869235')"
+              >
                 <img class="w-20 mt-6" src="./images/app_store.png" alt="" />
               </a>
             </div>
